@@ -20,7 +20,6 @@
     <script src="<?=base_url();?>public/bootstrap/css/dataTables.bootstrap.min.js"></script>
     <script src="<?=base_url();?>public/bootstrap/css/jquery.dataTables.min.js"></script>
     <script>
-    
         $(function (){
             //Init home application
             var home = new Home();
@@ -29,7 +28,15 @@
 	$(document).ready(function() {
 	    $('#example').DataTable();
 	} );
+        var $rows = $('#table tr');
+        $('#search-box').keyup(function() {
+            var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
 
+            $rows.show().filter(function() {
+                var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+                return !~text.indexOf(val);
+            }).hide();
+        });
     </script>
     <script>
       $.widget.bridge('uibutton', $.ui.button);

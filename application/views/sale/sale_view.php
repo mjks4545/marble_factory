@@ -11,8 +11,16 @@
             <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
-		    <div class="col-md-10">  
+		    <div class="col-md-5">  
 			<h3 class="box-title">Sales Table</h3>
+		    </div>
+		    <div class="col-md-5">
+			<div class="input-group" style="width: 150px;">
+			    <input id="search-box" name="table_search" class="form-control input-sm pull-right" placeholder="Search" type="text">
+			    <div class="input-group-btn">
+				<button class="btn btn-sm btn-default"><i class="fa fa-search"></i></button>
+			    </div>
+			</div>
 		    </div>
 		    <?php 
 			//print_r( $size );
@@ -25,7 +33,7 @@
 		    </div>
                 </div><!-- /.box-header -->
                 <div class="box-body">
-                  <table id="example2" class="table table-bordered table-hover"> 
+                  <table id="table" class="table table-bordered table-hover"> 
 		    <thead>
                      <tr>		 
                        <th>Date</th>

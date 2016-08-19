@@ -36,6 +36,21 @@ class Sale extends CI_Controller {
 	}
 	
 	// --------------------------------------------------------------------
+	public function sale_print( $id = null )
+	{    
+	    $this->id_null( $id );
+	    $this->db->order_by("size_id", "desc"); 
+	    $query = $this->db->get_where( 'size' , ['sale_id'=>$id] );
+	    $result ['size'] = $query->result();
+	    $this->db->order_by("sale_id", "desc"); 
+	    $query = $this->db->get_where( 'sale' , ['sale_id'=>$id] );
+	    $result ['sale'] = $query->result();
+	    $this->load->view('include/header');
+	    $this->load->view('include/sidebar');
+	    $this->load->view('sale/print_view',$result);
+	    $this->load->view('include/footer');
+	}
+	// --------------------------------------------------------------------
 
 	public function create_sale()
 	{ 
@@ -232,6 +247,20 @@ class Sale extends CI_Controller {
 		]) );
 	    }
 	    return FALSE;
+	}
+	
+	// --------------------------------------------------------------------
+	
+	public function print_view( $id = null ){
+	    $this->id_null( $id );
+	    $this->db->order_by("size_id", "desc"); 
+	    $query = $this->db->get_where( 'size' , ['sale_id'=>$id] );
+	    $result ['size'] = $query->result();
+	    $this->db->order_by("sale_id", "desc"); 
+	    $query = $this->db->get_where( 'sale' , ['sale_id'=>$id] );
+	    $result ['sale'] = $query->result();
+	    $this->load->view('sale/print',$result);
+	    
 	}
 	
 	// --------------------------------------------------------------------

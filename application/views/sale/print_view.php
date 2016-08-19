@@ -1,3 +1,10 @@
+<style>
+    @media print{
+	.hidden-class{
+	    display: none;
+	}
+    }
+</style>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
 <!-- Content Header (Page header) -->        
@@ -11,13 +18,6 @@
             <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
-		    <div class="col-md-10">  
-			<h3 class="hidden-class box-title">Sales Table</h3>
-		    </div>
-		    <div class="col-md-2">  
-			<a class="hidden-class btn btn-primary" href="<?=  site_url();?>sale/"><i class="fa fa-user"></i>&nbsp;&nbsp;Go Back</a>
-			<a class="hidden-class btn btn-primary" href="<?=  site_url();?>sale/print_view/<?=$sale[0]->sale_id?>"><i class="fa fa-print"></i>&nbsp;&nbsp;Print</a>
-		    </div>
 		    <div id="some_message">
 			    
 		    </div>

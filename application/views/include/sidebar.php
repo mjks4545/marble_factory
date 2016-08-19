@@ -48,6 +48,31 @@
 		    <li class="active"><a href="<?=  site_url() ?>expense"><i class="fa fa-circle-o"></i> View Expense</a></li>
 		</ul>
             </li>
+            <li class="treeview">
+                <a href="<?=site_url();?>">
+		    <i class="fa fa-dashboard"></i> <span>User</span> <i class="fa fa-angle-left pull-right"></i>
+		</a>
+		<ul class="treeview-menu">
+		    <li class="active"><a href="<?=  site_url() ?>user/user_add"><i class="fa fa-circle-o"></i> User Add</a></li>
+		</ul>
+            </li>
+            <!--<li class="treeview">
+                <a href="<?=site_url();?>">
+		    <i class="fa fa-dashboard"></i> <span>Reports</span> <i class="fa fa-angle-left pull-right"></i>
+		</a>
+		<ul class="treeview-menu">
+		    <li class="active"><a href="<?=  site_url() ?>reports/"><i class="fa fa-circle-o"></i> View Reports</a></li>
+		</ul>
+            </li>-->
+            <li class="treeview">
+                <a href="<?=site_url();?>">
+		    <i class="fa fa-dashboard"></i> <span>Salary</span> <i class="fa fa-angle-left pull-right"></i>
+		</a>
+		<ul class="treeview-menu">
+		    <li class="active"><a href="<?=  site_url() ?>salary/salary_add"><i class="fa fa-circle-o"></i> Add Salary</a></li>
+		    <li class="active"><a href="<?=  site_url() ?>salary/"><i class="fa fa-circle-o"></i> View Salary</a></li>
+		</ul>
+            </li>
         </ul>
         </section>
         <!-- /.sidebar -->
